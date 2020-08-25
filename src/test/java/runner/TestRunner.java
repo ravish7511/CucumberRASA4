@@ -9,8 +9,7 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
 features = "./src/test/resources/Login.feature",//used to provide path of the feature file
 glue = {"stepDefnitions"}//used to provide package name where are steps are implemented
-
-		)
+,tags = "@smoke")
 public class TestRunner {
 
 }
