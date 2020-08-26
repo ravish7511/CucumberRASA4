@@ -34,6 +34,36 @@ Then order is placed successfully
 |debit card|   5% |   500 |
 |cod       | no discount| no cashback |
 
+@sanity
+Scenario: verify Actitime version
+
+Given  user is on Login Page
+When  user enters valid username "admin" and password "manager"
+And  clicks on Login button
+And user cliks on help
+And user clicks on About actitime
+And verify the Acti time version "actiTIME 2014 Pro"
+And user clicks on close
+And user cliks on logout
+Then login page should be displayed
+
+@new
+Scenario: verify Bug Report
+
+Given  user is on Login Page
+When  user enters valid username "admin" and password "manager"
+And  clicks on Login button
+And user cliks on help
+And user clicks on report
+And user enters description "ui issue"
+And user enters first name "Ravish"
+And user enters last name "Gowda"
+And user enters email "ravish@tyss.com"
+And use enters company "tyss"
+And users cliks on send report
+Then Bug report should be submitted successfully
+
+
 
 
 
